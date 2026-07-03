@@ -1,0 +1,785 @@
+{
+  "mindmaps": [
+    {
+      "id": "38F48A10-88BB-46EE-AA9B-6F45132449D0",
+      "title": "AI写小说全流程",
+      "root":       {
+        "id": "B8516D74-8D69-4520-BBB3-22AB8B1139E5",
+        "title": "AI写小说全流程",
+        "promptTitle": "从创意到开篇",
+        "children": [
+          {
+            "id": "6AE47E79-6673-4392-B966-C6290CFE4648",
+            "title": "第一步：扫榜",
+            "promptTitle": "热门题材发散",
+            "children": [
+              {
+                "id": "926591B2-2557-4974-94ED-E694D7E6EA01",
+                "title": "找到要写的对标书",
+                "promptTitle": "热门题材发散",
+                "children": [                ]
+              },
+              {
+                "id": "5AF5B67D-12C7-424C-A62C-5E9B3BDF4BD3",
+                "title": "验证题材有读者",
+                "promptTitle": "热门题材发散",
+                "children": [                ]
+              }
+            ]
+          },
+          {
+            "id": "6B2ADFFB-3669-42E3-A001-8EB0A75DF5F0",
+            "title": "第二步：制作大纲",
+            "promptTitle": "长篇网文总纲",
+            "children": [
+              {
+                "id": "929D483F-063E-4842-80B5-AE05B6BBE3DB",
+                "title": "书名",
+                "promptTitle": "标题与简介",
+                "children": [                ]
+              },
+              {
+                "id": "025ED835-2283-401C-AF23-D9BA497D308C",
+                "title": "简介",
+                "promptTitle": "标题与简介",
+                "children": [                ]
+              }
+            ]
+          },
+          {
+            "id": "C1354C3D-59E6-46E0-964F-9AA61B4BE36F",
+            "title": "第三步：制作细纲",
+            "promptTitle": "单章细纲",
+            "children": [
+              {
+                "id": "003BBCE3-8AE9-4470-B58A-9D750417E99C",
+                "title": "世界设定",
+                "promptTitle": "玄幻世界观",
+                "children": [                ]
+              },
+              {
+                "id": "1BA7B01E-0579-4EF4-9988-E91FA22F405C",
+                "title": "角色塑造",
+                "promptTitle": "主角人设卡",
+                "children": [                ]
+              },
+              {
+                "id": "0139F23C-3E05-4BD9-8CA2-89ECA9703428",
+                "title": "事件细纲",
+                "promptTitle": "连续 10 章规划",
+                "children": [                ]
+              }
+            ]
+          },
+          {
+            "id": "6F458F69-2324-4506-9600-BD4411605D53",
+            "title": "第四步：生成正文",
+            "promptTitle": "保持风格续写",
+            "children": [
+              {
+                "id": "5291A5CB-8BF4-422A-A9B9-2FE411A30398",
+                "title": "根据细纲生成正文",
+                "promptTitle": "保持风格续写",
+                "children": [                ]
+              },
+              {
+                "id": "53511C6D-7963-4E53-8970-1AB7B5B214C3",
+                "title": "人审修稿",
+                "promptTitle": "章节从草稿到精修",
+                "children": [                ]
+              },
+              {
+                "id": "82E8FDC0-6344-45C8-92EC-FD81AE2076DD",
+                "title": "逻辑问题",
+                "promptTitle": "逻辑与节奏检查",
+                "children": [                ]
+              },
+              {
+                "id": "05D7906C-2F7C-440E-B45C-B357858CC554",
+                "title": "删除冗余废话",
+                "promptTitle": "章节从草稿到精修",
+                "children": [                ]
+              }
+            ]
+          },
+          {
+            "id": "70489D9E-7047-4381-AC59-06AD9BF8037F",
+            "title": "第五步：发布",
+            "promptTitle": "平台风格适配",
+            "children": [            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4A21F62C-22F0-43AB-846C-AE76E92710CC",
+      "title": "世界设定",
+      "root":       {
+        "id": "35EFA1D9-C382-4393-A039-035155468A4C",
+        "title": "世界设定",
+        "promptTitle": "世界设定",
+        "children": [
+          {
+            "id": "E177BF3A-1013-4BBC-BF2A-6D05EE488757",
+            "title": "时代背景",
+            "promptTitle": "时代背景",
+            "children": [
+              {
+                "id": "6FEE2B52-E71A-4CCB-BC15-8CD19D5C0CB5",
+                "title": "现代日本，极道势力割据，表面法治黑暗面横行",
+                "promptTitle": "现代日本，极道势力割据，表面法治黑暗面横行",
+                "children": [                ]
+              }
+            ]
+          },
+          {
+            "id": "7EBEC175-9202-4CBC-B8CA-ABE4CE2AA1C1",
+            "title": "核心设定",
+            "promptTitle": "核心设定",
+            "children": [
+              {
+                "id": "A4AC598B-3FEA-4471-AE9E-6BC75B39D4FA",
+                "title": "韩国、日本邪教盛行",
+                "promptTitle": "韩国、日本邪教盛行",
+                "children": [
+                  {
+                    "id": "CA3F900C-FC0D-48DA-BBF9-CC7012E3D04C",
+                    "title": "主角打算效仿“统一教”，创建“幸福教”打造一个属于自己的社会主义日本。",
+                    "promptTitle": "主角打算效仿“统一教”，创建“幸福教”打造一个属于自己的社会主义日本。",
+                    "children": [                    ]
+                  }
+                ]
+              },
+              {
+                "id": "2E608AC2-802E-46BA-97E2-4FAAFE56EB90",
+                "title": "极道世界的法则",
+                "promptTitle": "极道世界的法则",
+                "children": [
+                  {
+                    "id": "837707DD-F984-4B23-9958-2420352DE64E",
+                    "title": "暴力与利益至上，家族制度森严，人口贩卖、非法交易等黑产横行",
+                    "promptTitle": "暴力与利益至上，家族制度森严，人口贩卖、非法交易等黑产横行",
+                    "children": [                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "BD3C8F5B-70CF-46B4-8E84-EBAAEB725022",
+            "title": "主要势力",
+            "promptTitle": "主要势力",
+            "children": [
+              {
+                "id": "D83C4752-DFEE-4428-9CD7-17B20CD1C04B",
+                "title": "黑泽家族",
+                "promptTitle": "黑泽家族",
+                "children": [
+                  {
+                    "id": "B63058D7-F8E0-46C6-8E6B-342178B27B39",
+                    "title": "四国深山的地头蛇，以神社为掩护，经营“种男”繁衍计划，控制血脉与资源",
+                    "promptTitle": "四国深山的地头蛇，以神社为掩护，经营“种男”繁衍计划，控制血脉与资源",
+                    "children": [                    ]
+                  }
+                ]
+              },
+              {
+                "id": "1EA3D82D-CA24-44CA-AB91-D93CD286079F",
+                "title": "其他极道组织",
+                "promptTitle": "其他极道组织",
+                "children": [
+                  {
+                    "id": "9E2B19CB-6256-4EC5-AE07-F6AA61360E1F",
+                    "title": "如关东联合会、关西组等（留白，可后续补充）",
+                    "promptTitle": "如关东联合会、关西组等（留白，可后续补充）",
+                    "children": [                    ]
+                  }
+                ]
+              },
+              {
+                "id": "6F70F54F-EBE6-4456-AFB1-7ABCF3DE7E09",
+                "title": "其他邪教势力",
+                "promptTitle": "其他邪教势力",
+                "children": [
+                  {
+                    "id": "97514507-C1CF-46E2-9D46-BCCD6B59BD3D",
+                    "title": "（留白，可后续补充）",
+                    "promptTitle": "（留白，可后续补充）",
+                    "children": [                    ]
+                  }
+                ]
+              },
+              {
+                "id": "C7EE06BD-61E9-454C-8E91-6EAE2AC75111",
+                "title": "日本政府",
+                "promptTitle": "日本政府",
+                "children": [
+                  {
+                    "id": "CAF4CD7B-EFD4-4231-BF6B-9D26B310D241",
+                    "title": "（留白，可后续补充）",
+                    "promptTitle": "（留白，可后续补充）",
+                    "children": [                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "E43CBD13-1824-4E33-A2A2-6CA95A12E537",
+            "title": "主角的特殊性",
+            "promptTitle": "主角的特殊性",
+            "children": [            ]
+          },
+          {
+            "id": "1CD2D929-16E4-42C4-BBA7-EB30EAB164A2",
+            "title": "前世宇智波凌的灵魂与写轮眼",
+            "promptTitle": "前世宇智波凌的灵魂与写轮眼",
+            "children": [
+              {
+                "id": "895283F3-8FAB-4F21-B0B0-032B79126423",
+                "title": "知晓剧情却败于人心，今世重生婴儿，以幻术和能力逐步掌控命运",
+                "promptTitle": "知晓剧情却败于人心，今世重生婴儿，以幻术和能力逐步掌控命运",
+                "children": [                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "E569D23A-F832-4255-B41D-933EB90635B9",
+      "title": "作品大纲",
+      "root":       {
+        "id": "13D6D508-1DAC-4E2E-A652-E2C0008A580F",
+        "title": "作品大纲",
+        "promptTitle": "作品大纲",
+        "children": [
+          {
+            "id": "4DA3D47C-FC37-463C-A680-143DED0FF5F9",
+            "title": "我的作品",
+            "promptTitle": "我的作品",
+            "children": [
+              {
+                "id": "5CCA2875-728D-4DC6-AF18-9611E754BEDC",
+                "title": "书名",
+                "promptTitle": "书名",
+                "children": [
+                  {
+                    "id": "D1595F59-E674-4DA9-AB29-490C44720365",
+                    "title": "重生极道：开局写轮眼夺权",
+                    "promptTitle": "重生极道：开局写轮眼夺权",
+                    "children": [                    ]
+                  }
+                ]
+              },
+              {
+                "id": "E89B4EC2-B5E5-4A0E-931F-E1F72EF17A43",
+                "title": "简介",
+                "promptTitle": "简介",
+                "children": [
+                  {
+                    "id": "6CA5426F-68B7-45B1-945B-AB84C00F2B24",
+                    "title": "【前世】",
+                    "promptTitle": "【前世】",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "37669C7E-90A5-4273-91F6-B873F0C83217",
+                    "title": "他是宇智波凌，知晓剧情却败给了人心，被团藏夺眼、被政客绞杀，最终在灭族之夜用伊邪那岐孤注一掷。",
+                    "promptTitle": "他是宇智波凌，知晓剧情却败给了人心，被团藏夺眼、被政客绞杀，最终在灭族之夜用伊邪那岐孤注一掷。",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "F5F1FCC1-0906-45E7-B90F-7AABBA954D1C",
+                    "title": "【今生】",
+                    "promptTitle": "【今生】",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "1227E3D4-AC50-4688-B6FA-E52FA86602E2",
+                    "title": "再次睁眼，他成了黑泽凌。",
+                    "promptTitle": "再次睁眼，他成了黑泽凌。",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "9D9C7286-C1FD-4D8B-AF8B-0A690865F4D1",
+                    "title": "这里是四国深山的黑泽家族，神社的鸟居下掩盖着人口贩卖的罪恶，极道的纹身里刻着吃人的规矩。",
+                    "promptTitle": "这里是四国深山的黑泽家族，神社的鸟居下掩盖着人口贩卖的罪恶，极道的纹身里刻着吃人的规矩。",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "42832C88-4A46-456B-9314-C03C0273FDDA",
+                    "title": "一出生，他就被判定为优质“种男”，注定要在温柔乡里沦为繁衍工具，被榨干最后一滴价值。",
+                    "promptTitle": "一出生，他就被判定为优质“种男”，注定要在温柔乡里沦为繁衍工具，被榨干最后一滴价值。",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "572A86A3-06B6-427F-91A1-A8C4777AB4E6",
+                    "title": "但这具婴儿身体里，住着一个曾俯瞰忍界的灵魂。",
+                    "promptTitle": "但这具婴儿身体里，住着一个曾俯瞰忍界的灵魂。",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "50C2F384-579B-4022-B8AE-E371543A75FF",
+                    "title": "奶水混着药物？婴儿房藏着监控？",
+                    "promptTitle": "奶水混着药物？婴儿房藏着监控？",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "FF6B694F-63BC-49CA-B470-EB57141378C2",
+                    "title": "黑泽凌看着接生婆那双满是老茧和纹身的手，在漆黑的瞳孔深处，一枚猩红的勾玉悄然转动。",
+                    "promptTitle": "黑泽凌看着接生婆那双满是老茧和纹身的手，在漆黑的瞳孔深处，一枚猩红的勾玉悄然转动。",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "2532B984-5845-4F84-B94B-60EDACB9DA8F",
+                    "title": "“想把我当牲口养？那就做好被牲口咬断喉咙的准备。”",
+                    "promptTitle": "“想把我当牲口养？那就做好被牲口咬断喉咙的准备。”",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "A221310D-5E42-4301-8633-DC0C708D82CB",
+                    "title": "哪怕只有一丝查克拉，也要用幻术改写命运！",
+                    "promptTitle": "哪怕只有一丝查克拉，也要用幻术改写命运！",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "A3AC6E05-9D6A-48D4-AB95-508F50BA0EB5",
+                    "title": "不是接班人？那就改成接班人。",
+                    "promptTitle": "不是接班人？那就改成接班人。",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "321C8700-6E54-4056-8FEF-0213AC7B3845",
+                    "title": "不是家主？那就杀上去做家主。",
+                    "promptTitle": "不是家主？那就杀上去做家主。",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "C62F7FC3-6B9B-4E3F-BD7C-D86F01137D1E",
+                    "title": "这是宇智波在黑暗极道世界的第二次人生。",
+                    "promptTitle": "这是宇智波在黑暗极道世界的第二次人生。",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "47D8AD56-DFC1-4566-BA85-B26ED4B682C5",
+                    "title": "这一次，他不谈正义，只谈掌控。",
+                    "promptTitle": "这一次，他不谈正义，只谈掌控。",
+                    "children": [                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "6DACB89E-8902-4B5F-B7B2-88677229FA9E",
+      "title": "角色塑造",
+      "root":       {
+        "id": "9FD19777-BB17-43FF-B400-F5BE24C1C8C9",
+        "title": "角色塑造",
+        "promptTitle": "角色塑造",
+        "children": [
+          {
+            "id": "B252A1E3-12B9-44F5-BB12-02AED2084511",
+            "title": "主角",
+            "promptTitle": "主角",
+            "children": [
+              {
+                "id": "6A1C1714-5FFE-43F1-8C30-012B9589263B",
+                "title": "基础信息",
+                "promptTitle": "基础信息",
+                "children": [
+                  {
+                    "id": "429CF891-9A32-4CBB-B526-00D7DCCDF1CB",
+                    "title": "姓名：黑泽凌",
+                    "promptTitle": "姓名：黑泽凌",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "184C719C-FAB7-4237-8014-9B3F33870B00",
+                    "title": "前世：凌操、宇智波凌",
+                    "promptTitle": "前世：凌操、宇智波凌",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "26E272BD-A7D6-40E0-9BD0-3622D7640E61",
+                    "title": "身份/职业：黑泽家新生“接班人”（原定种男）、重生者、写轮眼持有者",
+                    "promptTitle": "身份/职业：黑泽家新生“接班人”（原定种男）、重生者、写轮眼持有者",
+                    "children": [                    ]
+                  }
+                ]
+              },
+              {
+                "id": "13CCA71F-B0B1-4BA7-B710-03C7ACEAAC6B",
+                "title": "当前状态",
+                "promptTitle": "当前状态",
+                "children": [
+                  {
+                    "id": "99C50154-5FAF-45D4-ADE8-C2BEBAE72963",
+                    "title": "婴儿（初生）",
+                    "promptTitle": "婴儿（初生）",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "07C2004A-3705-406B-963D-460236616360",
+                    "title": "查克拉极少",
+                    "promptTitle": "查克拉极少",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "33B1C6FF-9054-4237-92EB-04E6357157E6",
+                    "title": "身体虚弱但精神力强大",
+                    "promptTitle": "身体虚弱但精神力强大",
+                    "children": [                    ]
+                  }
+                ]
+              },
+              {
+                "id": "F46C77BA-B54F-405C-B17F-EFFC1F110002",
+                "title": "性格画像",
+                "promptTitle": "性格画像",
+                "children": [
+                  {
+                    "id": "59317A0C-7ACD-45D8-B371-1387ABF2E3D3",
+                    "title": "极度理智冷静",
+                    "promptTitle": "极度理智冷静",
+                    "children": [
+                      {
+                        "id": "42F0F9A5-222E-4929-8A1E-463B77D0351B",
+                        "title": "重生后迅速接受现实，没有惊慌失措",
+                        "promptTitle": "重生后迅速接受现实，没有惊慌失措",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "738CAE53-4F03-46D1-9270-E30FAD47569D",
+                        "title": "看穿“种男”福利的圈养本质：只要前面加上“黑泽家”三个字，那就不是享受，是圈养",
+                        "promptTitle": "看穿“种男”福利的圈养本质：只要前面加上“黑泽家”三个字，那就不是享受，是圈养",
+                        "children": [                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "F5550A55-E5B8-483F-9366-FA3C6425C8D7",
+                    "title": "杀伐果断/行动力强",
+                    "promptTitle": "杀伐果断/行动力强",
+                    "children": [
+                      {
+                        "id": "383C179F-4214-4C05-8AD3-5071115B7442",
+                        "title": "判断局势不对后，立刻消耗濒死查克拉强行开启写轮眼发动幻术",
+                        "promptTitle": "判断局势不对后，立刻消耗濒死查克拉强行开启写轮眼发动幻术",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "39DE93EA-8801-43E2-945B-2281DC6DF7A1",
+                        "title": "明知强行施术会榨干自己，仍冒险改命",
+                        "promptTitle": "明知强行施术会榨干自己，仍冒险改命",
+                        "children": [                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "95CB3920-E6D0-4E17-8ECF-576F7B54D3BF",
+                    "title": "洞察力敏锐",
+                    "promptTitle": "洞察力敏锐",
+                    "children": [
+                      {
+                        "id": "A4E4D441-C203-4CD8-89DF-790BB3445668",
+                        "title": "通过医院、香火、血等气味迅速判断环境异常",
+                        "promptTitle": "通过医院、香火、血等气味迅速判断环境异常",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "DB986C48-9925-45EC-8A37-D677903C463A",
+                        "title": "通过老妇人的纹身推断黑泽家的黑道本质",
+                        "promptTitle": "通过老妇人的纹身推断黑泽家的黑道本质",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "88F55461-6BB4-4050-8CE0-6DEA83BB6200",
+                        "title": "通过奶水甜味判断奶水有问题",
+                        "promptTitle": "通过奶水甜味判断奶水有问题",
+                        "children": [                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "1569C356-2F58-48DC-9E13-B0AD24975C24",
+                "title": "能力/金手指",
+                "promptTitle": "能力/金手指",
+                "children": [
+                  {
+                    "id": "65929EEE-9929-43C2-A7BE-78712EA762D9",
+                    "title": "显性能力：无（目前为婴儿，无法行动）",
+                    "promptTitle": "显性能力：无（目前为婴儿，无法行动）",
+                    "children": [                    ]
+                  },
+                  {
+                    "id": "CA8FB1A2-0B38-4D8B-B41A-746B75595C0C",
+                    "title": "前世记忆",
+                    "promptTitle": "前世记忆",
+                    "children": [
+                      {
+                        "id": "CBC7C373-0B3A-471E-9171-1DDA013B76AD",
+                        "title": "熟知忍界历史与斗争经验",
+                        "promptTitle": "熟知忍界历史与斗争经验",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "E8EC6B48-901D-41B9-90BB-4260555A5E8D",
+                        "title": "剧情虽变，但心性与策略犹在",
+                        "promptTitle": "剧情虽变，但心性与策略犹在",
+                        "children": [                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "1027AA8B-3745-4559-A2B4-886A7235E0DE",
+                    "title": "写轮眼",
+                    "promptTitle": "写轮眼",
+                    "children": [
+                      {
+                        "id": "AC8E355C-292F-4321-9934-0D1C49A8EA17",
+                        "title": "目前已开启单勾玉",
+                        "promptTitle": "目前已开启单勾玉",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "F010CE45-346B-46B8-8636-0DFD18F78834",
+                        "title": "具备幻术暗示能力",
+                        "promptTitle": "具备幻术暗示能力",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "31879FE9-D517-4A65-B3B7-4D350B86CCEC",
+                        "title": "伊邪那岐已用，目前仅为常规瞳术",
+                        "promptTitle": "伊邪那岐已用，目前仅为常规瞳术",
+                        "children": [                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "593F696A-9266-4A11-8F45-EBD7A1FEF937",
+                    "title": "查克拉",
+                    "promptTitle": "查克拉",
+                    "children": [
+                      {
+                        "id": "1EEA166B-A70B-49C1-A211-FD1B1C7E9C1D",
+                        "title": "保留一丝火影世界的查克拉种子",
+                        "promptTitle": "保留一丝火影世界的查克拉种子",
+                        "children": [                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "A85C9245-56A1-4522-AFC2-27997B155F28",
+                "title": "核心驱动力",
+                "promptTitle": "核心驱动力",
+                "children": [
+                  {
+                    "id": "327107ED-3DCB-4B9E-8539-700FEB2B5CA2",
+                    "title": "表层目标",
+                    "promptTitle": "表层目标",
+                    "children": [
+                      {
+                        "id": "3009B0E0-9A3F-44FA-9D92-ED45F47B2C5C",
+                        "title": "生存",
+                        "promptTitle": "生存",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "C0B48B17-400A-44E4-862A-E9E0E14E8BFE",
+                        "title": "摆脱被当作“种男/工具”的命运",
+                        "promptTitle": "摆脱被当作“种男/工具”的命运",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "6CE71963-5ACA-43EB-8367-26FC697844EA",
+                        "title": "在黑泽家站稳脚跟",
+                        "promptTitle": "在黑泽家站稳脚跟",
+                        "children": [                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "BC3F5742-A046-4528-B3C8-6DA5580B0F59",
+                    "title": "深层动机/执念",
+                    "promptTitle": "深层动机/执念",
+                    "children": [
+                      {
+                        "id": "56F92117-5A74-46D6-B16F-0BECD03A6D5B",
+                        "title": "不甘心失败",
+                        "promptTitle": "不甘心失败",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "BDAD10B9-1655-449C-A6A5-9844C7F65466",
+                        "title": "前世即使知道剧情仍被收割，这一世想赢过这个世界",
+                        "promptTitle": "前世即使知道剧情仍被收割，这一世想赢过这个世界",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "60169978-02F3-4174-8A69-CEDF722DCD2A",
+                        "title": "掌控自己的命运",
+                        "promptTitle": "掌控自己的命运",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "893021F1-07ED-4D25-A4BF-B5553B4B70E9",
+                        "title": "核心心声：我还是不甘心",
+                        "promptTitle": "核心心声：我还是不甘心",
+                        "children": [                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "C00F18E5-F289-44D9-8DCD-2654228790CD",
+            "title": "后宫团",
+            "promptTitle": "后宫团",
+            "children": [            ]
+          },
+          {
+            "id": "20ABBDF4-C536-45AA-80A4-0D27D847EB85",
+            "title": "伙伴",
+            "promptTitle": "伙伴",
+            "children": [            ]
+          },
+          {
+            "id": "6525F79E-A0CC-4F5E-8501-8A6814B19EB1",
+            "title": "次要角色",
+            "promptTitle": "次要角色",
+            "children": [            ]
+          },
+          {
+            "id": "6371E18A-0865-4F8A-BFDF-4A4D396FBDEA",
+            "title": "反派",
+            "promptTitle": "反派",
+            "children": [            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "F258DB24-9FD3-4159-8962-E2F90EE26B9A",
+      "title": "事件细纲",
+      "root":       {
+        "id": "FAF13E02-0ABD-497E-9937-5EB3266C61B0",
+        "title": "事件细纲",
+        "promptTitle": "事件细纲",
+        "children": [
+          {
+            "id": "6FF829B5-B24C-4B96-9B97-EC58FF27F1BB",
+            "title": "阶段一",
+            "promptTitle": "阶段一",
+            "children": [
+              {
+                "id": "A798924A-EB8C-4958-9BC5-30529DED3CAC",
+                "title": "阶段大纲",
+                "promptTitle": "",
+                "children": [
+                  {
+                    "id": "8CE493E6-993E-486F-BE3E-67CFFE87B286",
+                    "title": "阶段概要",
+                    "promptTitle": "阶段概要",
+                    "children": [
+                      {
+                        "id": "310322E4-7735-46AB-8281-A8AA8482C716",
+                        "title": "核心事件：",
+                        "promptTitle": "这个阶段大致写什么",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "0A94950B-F2C3-47BD-B05F-56C7E26BE5FE",
+                        "title": "主要人物",
+                        "promptTitle": "",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "FA57F809-E658-4695-8B5C-356F8975B538",
+                        "title": "主要场景",
+                        "promptTitle": "",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "3BBBCEFB-941E-4392-9C23-90AFEA533780",
+                        "title": "核心看点",
+                        "promptTitle": "",
+                        "children": [                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "416A1A8E-00E8-4646-97B9-92C394DE3C0C",
+                    "title": "主要剧情节点",
+                    "promptTitle": "事件集合",
+                    "children": [
+                      {
+                        "id": "BED0670A-027A-4194-B4F9-67155CDC8D87",
+                        "title": "开端",
+                        "promptTitle": "事件一",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "72DC5614-0450-4056-A655-4778A5235509",
+                        "title": "发展",
+                        "promptTitle": "。。。",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "BC904DAD-B6EB-4609-9148-4CDBB8050FE7",
+                        "title": "高潮",
+                        "promptTitle": "事件N",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "81CB10DE-6C8C-45EC-AB18-112FC88DE341",
+                        "title": "结局",
+                        "promptTitle": "",
+                        "children": [                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "310F8B36-733B-44C1-B918-E30CC97DA955",
+                    "title": "阶段结束标志",
+                    "promptTitle": "",
+                    "children": [
+                      {
+                        "id": "E1398525-21D9-4AAC-BEC8-EB6B32560B50",
+                        "title": "标志1",
+                        "promptTitle": "",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "8357F666-4A54-4937-BE2E-6C0CECA86806",
+                        "title": "标志2",
+                        "promptTitle": "",
+                        "children": [                        ]
+                      },
+                      {
+                        "id": "639A8D8C-38B0-43A4-BDF7-F4C8F965A8CF",
+                        "title": "标志3",
+                        "promptTitle": "",
+                        "children": [                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
