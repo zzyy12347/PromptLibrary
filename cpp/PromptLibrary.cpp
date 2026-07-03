@@ -1446,12 +1446,12 @@ static std::wstring PickFile(bool save, const wchar_t* filter, const wchar_t* de
     return ok ? std::wstring(fileName) : L"";
 }
 
-static std::wstring PickJsonFile(bool save) {
-    return PickFile(save, L"JSON 文件 (*.json)\0*.json\0所有文件 (*.*)\0*.*\0", L"json");
-}
-
 static std::wstring PickMarkdownFile(bool save) {
     return PickFile(save, L"Markdown 文件 (*.md)\0*.md\0所有文件 (*.*)\0*.*\0", L"md");
+}
+
+static std::wstring PickMindMapImportFile() {
+    return PickFile(false, L"导图文件 (*.json;*.md)\0*.json;*.md\0JSON 文件 (*.json)\0*.json\0Markdown 文件 (*.md)\0*.md\0所有文件 (*.*)\0*.*\0", L"json");
 }
 
 static std::wstring EscapeMarkdownText(std::wstring text) {
@@ -1460,21 +1460,198 @@ static std::wstring EscapeMarkdownText(std::wstring text) {
     return Trim(text);
 }
 
-static void SerializeMindNodeMarkdown(const MindNode& node, std::wstring& markdown, int depth) {
-    std::wstring indent(depth * 2, L' ');
-    markdown += indent + L"- " + EscapeMarkdownText(node.title) + L"\r\n";
-    if (!node.promptTitle.empty() && node.promptTitle != node.title) {
-        markdown += indent + L"  - 关联提示词：" + EscapeMarkdownText(node.promptTitle) + L"\r\n";
+static std::wstring CleanMarkdownInline(std::wstring text) {
+    text = Trim(text);
+    size_t pos = 0;
+    while ((pos = text.find(L"**", pos)) != std::wstring::npos) {
+        text.erase(pos, 2);
     }
-    for (const auto& child : node.children) {
-        SerializeMindNodeMarkdown(child, markdown, depth + 1);
+    pos = 0;
+    while ((pos = text.find(L"__", pos)) != std::wstring::npos) {
+        text.erase(pos, 2);
+    }
+    return Trim(text);
+}
+
+static void SerializeMindNodeMarkdown(const MindNode& node, std::wstring& markdown, int depth) {
+    std::wstring title = EscapeMarkdownText(node.title);
+    if (title.empty()) return;
+
+    if (depth == 1) {
+        markdown += L"## " + title + L"\r\n";
+        for (const auto& child : node.children) SerializeMindNodeMarkdown(child, markdown, depth + 1);
+        markdown += L"\r\n";
+        return;
+    }
+
+    if (depth == 2 && !node.children.empty()) {
+        markdown += L"### " + title + L"\r\n";
+        for (const auto& child : node.children) SerializeMindNodeMarkdown(child, markdown, depth + 1);
+        markdown += L"\r\n";
+        return;
+    }
+
+    if (depth == 2 && node.children.empty()) {
+        markdown += title + L"\r\n\r\n";
+        return;
+    }
+
+    std::wstring indent((depth - 3) * 4, L' ');
+    markdown += indent + L"*   " + title + L"\r\n";
+    for (const auto& child : node.children) SerializeMindNodeMarkdown(child, markdown, depth + 1);
+    if (depth == 3) markdown += L"\r\n";
+}
+
+static void SerializeMindMapChildrenMarkdown(const MindNode& root, std::wstring& markdown) {
+    for (const auto& child : root.children) {
+        SerializeMindNodeMarkdown(child, markdown, 1);
     }
 }
 
 static std::wstring SerializeMindMapMarkdown(const MindMap& map) {
     std::wstring markdown = L"# " + EscapeMarkdownText(map.title) + L"\r\n\r\n";
-    SerializeMindNodeMarkdown(map.root, markdown, 0);
+    if (map.root.children.empty()) {
+        markdown += EscapeMarkdownText(map.root.title) + L"\r\n";
+    } else {
+        SerializeMindMapChildrenMarkdown(map.root, markdown);
+    }
     return markdown;
+}
+
+static bool StartsWith(const std::wstring& text, const std::wstring& prefix) {
+    return text.size() >= prefix.size() && text.compare(0, prefix.size(), prefix) == 0;
+}
+
+static bool EndsWithLower(const std::wstring& text, const std::wstring& suffix) {
+    std::wstring lowerText = Lower(text);
+    std::wstring lowerSuffix = Lower(suffix);
+    return lowerText.size() >= lowerSuffix.size() && lowerText.compare(lowerText.size() - lowerSuffix.size(), lowerSuffix.size(), lowerSuffix) == 0;
+}
+
+static int HeadingLevel(const std::wstring& line, std::wstring& title) {
+    std::wstring trimmed = Trim(line);
+    int level = 0;
+    while (level < (int)trimmed.size() && trimmed[level] == L'#') ++level;
+    if (level == 0 || level > 6) return 0;
+    if (level < (int)trimmed.size() && !iswspace(trimmed[level])) return 0;
+    title = Trim(trimmed.substr(level));
+    return title.empty() ? 0 : level;
+}
+
+static bool ParseMarkdownListItem(const std::wstring& line, int& depth, std::wstring& content) {
+    size_t pos = 0;
+    int columns = 0;
+    while (pos < line.size() && (line[pos] == L' ' || line[pos] == L'\t')) {
+        columns += line[pos] == L'\t' ? 4 : 1;
+        ++pos;
+    }
+    depth = columns / 2;
+    if (pos >= line.size()) return false;
+
+    if ((line[pos] == L'-' || line[pos] == L'*' || line[pos] == L'+') && pos + 1 < line.size() && iswspace(line[pos + 1])) {
+        content = Trim(line.substr(pos + 2));
+        return !content.empty();
+    }
+
+    size_t numberStart = pos;
+    while (pos < line.size() && iswdigit(line[pos])) ++pos;
+    if (pos > numberStart && pos < line.size() && (line[pos] == L'.' || line[pos] == L')') && pos + 1 < line.size() && iswspace(line[pos + 1])) {
+        content = Trim(line.substr(pos + 2));
+        return !content.empty();
+    }
+    return false;
+}
+
+static MindNode* NodeAtPath(MindNode& root, const std::vector<size_t>& path, int depth) {
+    if (depth <= 0) return &root;
+    MindNode* current = &root;
+    for (int i = 0; i < depth && i < (int)path.size(); ++i) {
+        if (path[i] >= current->children.size()) return current;
+        current = &current->children[path[i]];
+    }
+    return current;
+}
+
+static void AddMarkdownNode(MindMap& map, std::vector<size_t>& path, int depth, const std::wstring& title) {
+    int nodeDepth = std::max(1, depth);
+    int parentDepth = nodeDepth - 1;
+    if ((int)path.size() < parentDepth) parentDepth = (int)path.size();
+    MindNode* parent = NodeAtPath(map.root, path, parentDepth);
+    parent->children.push_back(MakeMindNode(CleanMarkdownInline(title), CleanMarkdownInline(title)));
+    if ((int)path.size() < nodeDepth) path.resize(nodeDepth, 0);
+    path[nodeDepth - 1] = parent->children.size() - 1;
+    path.resize(nodeDepth);
+}
+
+static MindMap ParseMarkdownMindMap(const std::wstring& markdown, const std::wstring& fallbackTitle) {
+    MindMap map;
+    map.id = NewId();
+    map.title = fallbackTitle.empty() ? L"导入的 Markdown 导图" : fallbackTitle;
+    map.root = MakeMindNode(map.title, map.title);
+
+    std::vector<size_t> path;
+    int currentHeadingDepth = 0;
+    bool sawTitle = false;
+
+    for (const auto& rawLine : SplitLines(markdown)) {
+        std::wstring trimmedLine = Trim(rawLine);
+        if (trimmedLine.empty()) continue;
+
+        std::wstring headingTitle;
+        int heading = HeadingLevel(rawLine, headingTitle);
+        if (heading > 0) {
+            headingTitle = CleanMarkdownInline(headingTitle);
+            if (heading == 1 && !sawTitle) {
+                map.title = headingTitle;
+                map.root.title = headingTitle;
+                map.root.promptTitle = headingTitle;
+                path.clear();
+                currentHeadingDepth = 0;
+                sawTitle = true;
+            } else {
+                int nodeDepth = std::max(1, heading - 1);
+                AddMarkdownNode(map, path, nodeDepth, headingTitle);
+                currentHeadingDepth = nodeDepth;
+            }
+            continue;
+        }
+
+        int depth = 0;
+        std::wstring content;
+        bool isListItem = ParseMarkdownListItem(rawLine, depth, content);
+        if (!isListItem) {
+            content = trimmedLine;
+            depth = 0;
+        }
+        content = CleanMarkdownInline(content);
+        if (content.empty()) continue;
+
+        const std::wstring promptPrefix = L"关联提示词：";
+        if (StartsWith(content, promptPrefix)) {
+            int targetDepth = std::max(1, currentHeadingDepth + depth);
+            MindNode* target = NodeAtPath(map.root, path, targetDepth);
+            if (target && target != &map.root) {
+                target->promptTitle = Trim(content.substr(promptPrefix.size()));
+            }
+            continue;
+        }
+
+        if (!sawTitle && map.root.children.empty() && !isListItem) {
+            map.title = content;
+            map.root.title = content;
+            map.root.promptTitle = content;
+            sawTitle = true;
+        } else {
+            int nodeDepth = currentHeadingDepth + 1 + depth;
+            AddMarkdownNode(map, path, nodeDepth, content);
+        }
+    }
+
+    if (map.root.children.empty()) {
+        map.root = MakeMindNode(map.title, map.title);
+    }
+    EnsureMindMapIds(map);
+    return map;
 }
 
 static void ExportCurrentMindMap() {
@@ -1487,18 +1664,27 @@ static void ExportCurrentMindMap() {
 }
 
 static void ImportMindMaps() {
-    std::wstring path = PickJsonFile(false);
+    std::wstring path = PickMindMapImportFile();
     if (path.empty()) return;
-    std::wstring json;
-    if (!ReadUtf8File(path, json)) {
+    std::wstring content;
+    if (!ReadUtf8File(path, content)) {
         MessageBoxW(g_mindMap, L"无法读取导入文件。", APP_TITLE, MB_ICONERROR);
         return;
     }
     std::vector<MindMap> imported;
-    JsonReader reader(json);
-    if (!reader.ReadMindMaps(imported) || imported.empty()) {
-        MessageBoxW(g_mindMap, L"导入文件格式不正确。", APP_TITLE, MB_ICONERROR);
-        return;
+    if (EndsWithLower(path, L".md") || EndsWithLower(path, L".markdown")) {
+        std::wstring fileName = path;
+        size_t slash = fileName.find_last_of(L"\\/");
+        if (slash != std::wstring::npos) fileName = fileName.substr(slash + 1);
+        size_t dot = fileName.find_last_of(L'.');
+        if (dot != std::wstring::npos) fileName = fileName.substr(0, dot);
+        imported.push_back(ParseMarkdownMindMap(content, fileName));
+    } else {
+        JsonReader reader(content);
+        if (!reader.ReadMindMaps(imported) || imported.empty()) {
+            MessageBoxW(g_mindMap, L"导入文件格式不正确。", APP_TITLE, MB_ICONERROR);
+            return;
+        }
     }
     for (auto& map : imported) {
         map.id = NewId();
